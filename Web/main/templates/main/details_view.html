@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="alert alert-warning">
+    <h1>{{ vote.name }}</h1>
+    <p>{{ vote.full_text }}</p>
+</div>
+{% include 'main/test.html' %}
+{% endblock %}

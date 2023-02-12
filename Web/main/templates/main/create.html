@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}форма для добавления статьи{% endblock %}
+
+{% block content %}
+<div class="create">
+    <h1>{{ title }}</h1>
+    <h2>Новый опрос</h2>
+    <form method="post">
+        {% csrf_token%}
+        {{ form.name }}<br>
+        {{ form.full_text }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">Создать</button>
+    </form>
+
+</div>
+{% include 'main/test.html' %}
+{% endblock %}
